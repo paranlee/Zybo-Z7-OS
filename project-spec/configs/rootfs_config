@@ -128,13 +128,13 @@ CONFIG_e2fsprogs-mke2fs=y
 #
 # elfutils 
 #
-# CONFIG_elfutils is not set
-# CONFIG_libdw is not set
-# CONFIG_elfutils-dev is not set
-# CONFIG_elfutils-binutils is not set
-# CONFIG_libelf is not set
-# CONFIG_libasm is not set
-# CONFIG_elfutils-dbg is not set
+CONFIG_elfutils=y
+CONFIG_libdw=y
+CONFIG_elfutils-dev=y
+CONFIG_elfutils-binutils=y
+CONFIG_libelf=y
+CONFIG_libasm=y
+CONFIG_elfutils-dbg=y
 
 #
 # formfactor 
@@ -1086,12 +1086,12 @@ CONFIG_run-postinsts=y
 #
 # kexec-tools 
 #
-# CONFIG_kexec-tools is not set
-# CONFIG_kexec-tools-dbg is not set
-# CONFIG_kdump is not set
-# CONFIG_kexec-tools-dev is not set
-# CONFIG_kexec is not set
-# CONFIG_vmcore-dmesg is not set
+CONFIG_kexec-tools=y
+CONFIG_kexec-tools-dbg=y
+CONFIG_kdump=y
+CONFIG_kexec-tools-dev=y
+CONFIG_kexec=y
+CONFIG_vmcore-dmesg=y
 
 #
 # libs 
@@ -1210,9 +1210,9 @@ CONFIG_run-postinsts=y
 #
 # ffmpeg 
 #
-# CONFIG_ffmpeg is not set
-# CONFIG_ffmpeg-dbg is not set
-# CONFIG_ffmpeg-dev is not set
+CONFIG_ffmpeg=y
+CONFIG_ffmpeg-dbg=y
+CONFIG_ffmpeg-dev=y
 
 #
 # flac 
@@ -1864,11 +1864,11 @@ CONFIG_taglib=y
 # ncurses 
 #
 CONFIG_ncurses=y
-# CONFIG_ncurses-terminfo-base is not set
-# CONFIG_ncurses-dev is not set
-# CONFIG_ncurses-tools is not set
-# CONFIG_ncurses-terminfo is not set
-# CONFIG_ncurses-dbg is not set
+CONFIG_ncurses-terminfo-base=y
+CONFIG_ncurses-dev=y
+CONFIG_ncurses-tools=y
+CONFIG_ncurses-terminfo=y
+CONFIG_ncurses-dbg=y
 
 #
 # neon 
@@ -2161,9 +2161,9 @@ CONFIG_alsa-states=y
 #
 # coreutils 
 #
-# CONFIG_coreutils is not set
-# CONFIG_coreutils-dev is not set
-# CONFIG_coreutils-dbg is not set
+CONFIG_coreutils=y
+CONFIG_coreutils-dev=y
+CONFIG_coreutils-dbg=y
 
 #
 # cpufrequtils 
@@ -2196,7 +2196,7 @@ CONFIG_alsa-states=y
 #
 # libudev 
 #
-# CONFIG_libudev is not set
+CONFIG_libudev=y
 CONFIG_udev-extraconf=y
 
 #
@@ -2224,17 +2224,17 @@ CONFIG_udev-extraconf=y
 # gcc-runtime 
 #
 CONFIG_libstdcPLUSPLUS=y
-# CONFIG_libstdcPLUSPLUS-dev is not set
+CONFIG_libstdcPLUSPLUS-dev=y
 
 #
 # gcc-sanitizers 
 #
-# CONFIG_gcc-sanitizers is not set
-# CONFIG_libubsan-dev is not set
-# CONFIG_libubsan is not set
-# CONFIG_gcc-sanitizers-dbg is not set
-# CONFIG_libasan is not set
-# CONFIG_libasan-dev is not set
+CONFIG_gcc-sanitizers=y
+CONFIG_libubsan-dev=y
+CONFIG_libubsan=y
+CONFIG_gcc-sanitizers-dbg=y
+CONFIG_libasan=y
+CONFIG_libasan-dev=y
 
 #
 # gcr 
@@ -2246,10 +2246,10 @@ CONFIG_libstdcPLUSPLUS=y
 #
 # gdb 
 #
-# CONFIG_gdb is not set
-# CONFIG_gdb-dbg is not set
-# CONFIG_gdb-dev is not set
-# CONFIG_gdbserver is not set
+CONFIG_gdb=y
+CONFIG_gdb-dbg=y
+CONFIG_gdb-dev=y
+CONFIG_gdbserver=y
 
 #
 # glib-2.0 
@@ -2345,9 +2345,9 @@ CONFIG_ldd=y
 #
 # iotop 
 #
-# CONFIG_iotop is not set
-# CONFIG_iotop-dev is not set
-# CONFIG_iotop-dbg is not set
+CONFIG_iotop=y
+CONFIG_iotop-dev=y
+CONFIG_iotop-dbg=y
 
 #
 # iptables 
@@ -2594,11 +2594,11 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 #
 # perf 
 #
-# CONFIG_perf is not set
-# CONFIG_perf-tests is not set
-# CONFIG_perf-python is not set
-# CONFIG_perf-dbg is not set
-# CONFIG_perf-dev is not set
+CONFIG_perf=y
+CONFIG_perf-tests=y
+CONFIG_perf-python=y
+CONFIG_perf-dbg=y
+CONFIG_perf-dev=y
 
 #
 # pixman 
@@ -2624,7 +2624,7 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 #
 # python3 
 #
-# CONFIG_python3 is not set
+CONFIG_python3=y
 # CONFIG_python3-smtpd is not set
 # CONFIG_python3-syslog is not set
 # CONFIG_python3-pickle is not set
@@ -2665,8 +2665,8 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 # CONFIG_python3-xml is not set
 # CONFIG_python3-threading is not set
 # CONFIG_python3-modules is not set
-# CONFIG_python3-dev is not set
-# CONFIG_python3-curses is not set
+CONFIG_python3-dev=y
+CONFIG_python3-curses=y
 # CONFIG_python3-multiprocessing is not set
 # CONFIG_python3-crypt is not set
 # CONFIG_python3-compression is not set
@@ -2686,8 +2686,8 @@ CONFIG_packagegroup-core-ssh-dropbear=y
 #
 # python3-async 
 #
-# CONFIG_python3-async is not set
-# CONFIG_python3-async-dev is not set
+CONFIG_python3-async=y
+CONFIG_python3-async-dev=y
 # CONFIG_python3-async-dbg is not set
 
 #
@@ -3020,7 +3020,7 @@ CONFIG_media-ctl=y
 #
 # valgrind 
 #
-# CONFIG_valgrind is not set
+CONFIG_valgrind=y
 # CONFIG_valgrind-dbg is not set
 # CONFIG_valgrind-dev is not set
 
@@ -3822,9 +3822,9 @@ CONFIG_u-boot-tools=y
 #
 # packagegroup-petalinux-python-modules 
 #
-# CONFIG_packagegroup-petalinux-python-modules is not set
-# CONFIG_packagegroup-petalinux-python-modules-dbg is not set
-# CONFIG_packagegroup-petalinux-python-modules-dev is not set
+CONFIG_packagegroup-petalinux-python-modules=y
+CONFIG_packagegroup-petalinux-python-modules-dbg=y
+CONFIG_packagegroup-petalinux-python-modules-dev=y
 
 #
 # packagegroup-petalinux-qt 
@@ -3851,16 +3851,16 @@ CONFIG_u-boot-tools=y
 #
 # packagegroup-petalinux-utils 
 #
-# CONFIG_packagegroup-petalinux-utils is not set
-# CONFIG_packagegroup-petalinux-utils-dbg is not set
-# CONFIG_packagegroup-petalinux-utils-dev is not set
+CONFIG_packagegroup-petalinux-utils=y
+CONFIG_packagegroup-petalinux-utils-dbg=y
+CONFIG_packagegroup-petalinux-utils-dev=y
 
 #
 # packagegroup-petalinux-v4lutils 
 #
-# CONFIG_packagegroup-petalinux-v4lutils is not set
-# CONFIG_packagegroup-petalinux-v4lutils-dbg is not set
-# CONFIG_packagegroup-petalinux-v4lutils-dev is not set
+CONFIG_packagegroup-petalinux-v4lutils=y
+CONFIG_packagegroup-petalinux-v4lutils-dbg=y
+CONFIG_packagegroup-petalinux-v4lutils-dev=y
 
 #
 # packagegroup-petalinux-x11 
@@ -3882,10 +3882,14 @@ CONFIG_imagefeature-debug-tweaks=y
 CONFIG_Init-manager-sysvinit=y
 
 #
+# apps 
+#
+CONFIG_gpio-demo=y
+CONFIG_peekpoke=y
+
+#
 # user packages 
 #
-# CONFIG_gpio-demo is not set
-# CONFIG_peekpoke is not set
 
 #
 # PetaLinux RootFS Settings
