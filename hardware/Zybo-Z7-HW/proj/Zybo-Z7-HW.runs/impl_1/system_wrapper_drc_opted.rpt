@@ -1,0 +1,82 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1.2 (lin64) Build 3605665 Fri Aug  5 22:52:02 MDT 2022
+| Date         : Mon Jan 15 06:41:11 2024
+| Host         : ubuntu running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+| Design       : system_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++----------+------------------+--------------------------------------------------+------------+
+| Rule     | Severity         | Description                                      | Violations |
++----------+------------------+--------------------------------------------------+------------+
+| NSTD-1   | Critical Warning | Unspecified I/O Standard                         | 1          |
+| UCIO-1   | Critical Warning | Unconstrained Logical Port                       | 1          |
+| REQP-107 | Warning          | enum_IOBDELAY_BOTH_enum_IOBDELAY_IBUF_connects_O | 2          |
+| REQP-165 | Advisory         | writefirst                                       | 2          |
+| REQP-181 | Advisory         | writefirst                                       | 2          |
++----------+------------------+--------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+13 out of 205 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: btns_4bits_tri_i[3:0], leds_4bits_tri_io[3:0], sws_4bits_tri_i[3:0]
+sys_clock.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+13 out of 205 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: btns_4bits_tri_i[3:0], leds_4bits_tri_io[3:0], sws_4bits_tri_i[3:0]
+sys_clock.
+Related violations: <none>
+
+REQP-107#1 Warning
+enum_IOBDELAY_BOTH_enum_IOBDELAY_IBUF_connects_O  
+system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.bd_ca02_phy_0_rx_ioi_i/dl0_iserdese2_master: The O output pin is required for IOBDELAY set BOTH or IBUF.
+Related violations: <none>
+
+REQP-107#2 Warning
+enum_IOBDELAY_BOTH_enum_IOBDELAY_IBUF_connects_O  
+system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.bd_ca02_phy_0_rx_ioi_i/dl1_ibufds_inst.dl1_iserdese2_master: The O output pin is required for IOBDELAY set BOTH or IBUF.
+Related violations: <none>
+
+REQP-165#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (system_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-165#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (system_i/axi_vdma_1/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (system_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (system_i/axi_vdma_1/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

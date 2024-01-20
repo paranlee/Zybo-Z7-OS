@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Mon Jan 15 06:23:38 2024
+# Process ID: 8637
+# Current directory: /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/system_rst_ps7_0_100M_0_synth_1
+# Command line: vivado -log system_rst_ps7_0_100M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_rst_ps7_0_100M_0.tcl
+# Log file: /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/system_rst_ps7_0_100M_0_synth_1/system_rst_ps7_0_100M_0.vds
+# Journal file: /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/system_rst_ps7_0_100M_0_synth_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 3408.000 MHz, CPU Physical cores: 4, Host memory: 8286 MB
+#-----------------------------------------------------------
+source system_rst_ps7_0_100M_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2716.133 ; gain = 5.961 ; free physical = 2483 ; free virtual = 5293
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sgdh/Zybo-Z7-HW/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_rst_ps7_0_100M_0, cache-ID = 34577bed2cbf0c15.
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 15 06:23:54 2024...

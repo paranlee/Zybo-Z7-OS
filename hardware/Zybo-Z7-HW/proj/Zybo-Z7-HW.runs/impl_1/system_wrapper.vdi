@@ -1,0 +1,921 @@
+#-----------------------------------------------------------
+# Vivado v2022.1.2 (64-bit)
+# SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+# IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+# Start of session at: Mon Jan 15 06:39:08 2024
+# Process ID: 12125
+# Current directory: /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1
+# Command line: vivado -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+# Log file: /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1/system_wrapper.vdi
+# Journal file: /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 3408.000 MHz, CPU Physical cores: 4, Host memory: 8286 MB
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2716.133 ; gain = 5.961 ; free physical = 3105 ; free virtual = 6376
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sgdh/Zybo-Z7-HW/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2716.133 ; gain = 0.000 ; free physical = 3016 ; free virtual = 6286
+Command: link_design -top system_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_dynclk_0_0/system_axi_dynclk_0_0.dcp' for cell 'system_i/axi_dynclk_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_eth_0/system_axi_gpio_eth_0.dcp' for cell 'system_i/axi_gpio_eth'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_led_0/system_axi_gpio_led_0.dcp' for cell 'system_i/axi_gpio_led'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_sw_btn_0/system_axi_gpio_sw_btn_0.dcp' for cell 'system_i/axi_gpio_sw_btn'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_video_0/system_axi_gpio_video_0.dcp' for cell 'system_i/axi_gpio_video'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_i2s_adi_1_0/system_axi_i2s_adi_1_0.dcp' for cell 'system_i/axi_i2s_adi_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0.dcp' for cell 'system_i/axi_iic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.dcp' for cell 'system_i/axi_vdma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.dcp' for cell 'system_i/axi_vdma_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axis_subset_converter_0_0/system_axis_subset_converter_0_0.dcp' for cell 'system_i/axis_subset_converter_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axis_subset_converter_in_0/system_axis_subset_converter_in_0.dcp' for cell 'system_i/axis_subset_converter_in'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axis_subset_converter_out_0/system_axis_subset_converter_out_0.dcp' for cell 'system_i/axis_subset_converter_out'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp' for cell 'system_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/system_dvi2rgb_1_0.dcp' for cell 'system_i/dvi2rgb_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/system_mipi_csi2_rx_subsystem_0_0.dcp' for cell 'system_i/mipi_csi2_rx_subsystem_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.dcp' for cell 'system_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp' for cell 'system_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_pwm_rgb_0/system_pwm_rgb_0.dcp' for cell 'system_i/pwm_rgb_RnM'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rgb2dvi_1_0/system_rgb2dvi_1_0.dcp' for cell 'system_i/rgb2dvi_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp' for cell 'system_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_133M_0/system_rst_ps7_0_133M_0.dcp' for cell 'system_i/rst_ps7_0_133M'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_util_ds_buf_fclk1_0/system_util_ds_buf_fclk1_0.dcp' for cell 'system_i/util_ds_buf_fclk1'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0.dcp' for cell 'system_i/v_axi4s_vid_out_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_frmbuf_wr_0_0/system_v_frmbuf_wr_0_0.dcp' for cell 'system_i/v_frmbuf_wr_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_in_0/system_v_tc_in_0.dcp' for cell 'system_i/v_tc_in'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_out_0/system_v_tc_out_0.dcp' for cell 'system_i/v_tc_out'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0.dcp' for cell 'system_i/v_vid_in_axi4s_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.dcp' for cell 'system_i/xadc_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp' for cell 'system_i/axi_mem_intercon/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp' for cell 'system_i/axi_mem_intercon_HP0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1.dcp' for cell 'system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0.dcp' for cell 'system_i/axi_mem_intercon_HP0/m00_couplers/m00_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0.dcp' for cell 'system_i/axi_mem_intercon_HP0/s00_couplers/s00_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s01_regslice_0/system_s01_regslice_0.dcp' for cell 'system_i/axi_mem_intercon_HP0/s01_couplers/s01_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.dcp' for cell 'system_i/ps7_0_axi_periph_GP0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2.dcp' for cell 'system_i/ps7_0_axi_periph_GP0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0.dcp' for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/phy'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_1/bd_ca02_r_sync_0.dcp' for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/r_sync'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_2/bd_ca02_rx_0.dcp' for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_4/bd_ca02_vfb_0_0.dcp' for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/vfb_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_0/bd_ca02_xbar_0.dcp' for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/xbar'
+Netlist sorting complete. Time (s): cpu = 00:00:00.6 ; elapsed = 00:00:00.6 . Memory (MB): peak = 2716.133 ; gain = 0.000 ; free physical = 2582 ; free virtual = 5853
+INFO: [Netlist 29-17] Analyzing 1382 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/src/dvi2rgb.xdc] for cell 'system_i/dvi2rgb_1/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/src/dvi2rgb.xdc] for cell 'system_i/dvi2rgb_1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc] for cell 'system_i/xadc_wiz_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc] for cell 'system_i/xadc_wiz_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_util_ds_buf_fclk1_0/system_util_ds_buf_fclk1_0_board.xdc] for cell 'system_i/util_ds_buf_fclk1/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_util_ds_buf_fclk1_0/system_util_ds_buf_fclk1_0_board.xdc] for cell 'system_i/util_ds_buf_fclk1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_133M_0/system_rst_ps7_0_133M_0.xdc] for cell 'system_i/rst_ps7_0_133M/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_133M_0/system_rst_ps7_0_133M_0.xdc] for cell 'system_i/rst_ps7_0_133M/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_133M_0/system_rst_ps7_0_133M_0_board.xdc] for cell 'system_i/rst_ps7_0_133M/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_133M_0/system_rst_ps7_0_133M_0_board.xdc] for cell 'system_i/rst_ps7_0_133M/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rgb2dvi_1_0/src/rgb2dvi.xdc] for cell 'system_i/rgb2dvi_1/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rgb2dvi_1_0/src/rgb2dvi.xdc] for cell 'system_i/rgb2dvi_1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.224970 which will be rounded to 0.225 to ensure it is an integer multiple of 1 picosecond [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc:24]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc] for cell 'system_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/system_mipi_csi2_rx_subsystem_0_0_board.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/system_mipi_csi2_rx_subsystem_0_0_board.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_2/bd_ca02_rx_0.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_2/bd_ca02_rx_0.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_1/bd_ca02_r_sync_0.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/r_sync/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_1/bd_ca02_r_sync_0.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/r_sync/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_1/bd_ca02_r_sync_0_board.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/r_sync/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_1/bd_ca02_r_sync_0_board.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/r_sync/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_dynclk_0_0/src/axi_dynclk.xdc] for cell 'system_i/axi_dynclk_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_dynclk_0_0/src/axi_dynclk.xdc] for cell 'system_i/axi_dynclk_0/U0'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_pixclk'. The XDC file /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/src/ila_pixclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_refclk'. The XDC file /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/src/ila_refclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 3005.113 ; gain = 264.969 ; free physical = 2023 ; free virtual = 5308
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc] for cell 'system_i/axi_vdma_1/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:60]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:64]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:92]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:96]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:108]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:120]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:124]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:136]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:144]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:148]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:156]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:160]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:168]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:172]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:176]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:180]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:184]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:192]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:196]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:200]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:204]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:208]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:212]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:216]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc:220]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0.xdc] for cell 'system_i/axi_vdma_1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc] for cell 'system_i/axi_vdma_0/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:60]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:64]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:68]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:72]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:80]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:84]
+WARNING: [Vivado_Tcl 4-935] Waiver ID 'CDC-4' is a duplicate and will not be added again. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:92]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:112]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:132]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:156]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:160]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:168]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:172]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:176]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:180]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:184]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:188]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:192]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:196]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:200]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:204]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:208]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:212]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:216]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc:220]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc] for cell 'system_i/axi_vdma_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc] for cell 'system_i/axi_iic_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc] for cell 'system_i/axi_iic_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_video_0/system_axi_gpio_video_0.xdc] for cell 'system_i/axi_gpio_video/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_video_0/system_axi_gpio_video_0.xdc] for cell 'system_i/axi_gpio_video/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_video_0/system_axi_gpio_video_0_board.xdc] for cell 'system_i/axi_gpio_video/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_video_0/system_axi_gpio_video_0_board.xdc] for cell 'system_i/axi_gpio_video/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_sw_btn_0/system_axi_gpio_sw_btn_0.xdc] for cell 'system_i/axi_gpio_sw_btn/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_sw_btn_0/system_axi_gpio_sw_btn_0.xdc] for cell 'system_i/axi_gpio_sw_btn/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_sw_btn_0/system_axi_gpio_sw_btn_0_board.xdc] for cell 'system_i/axi_gpio_sw_btn/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_sw_btn_0/system_axi_gpio_sw_btn_0_board.xdc] for cell 'system_i/axi_gpio_sw_btn/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_led_0/system_axi_gpio_led_0.xdc] for cell 'system_i/axi_gpio_led/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_led_0/system_axi_gpio_led_0.xdc] for cell 'system_i/axi_gpio_led/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_led_0/system_axi_gpio_led_0_board.xdc] for cell 'system_i/axi_gpio_led/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_led_0/system_axi_gpio_led_0_board.xdc] for cell 'system_i/axi_gpio_led/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_eth_0/system_axi_gpio_eth_0.xdc] for cell 'system_i/axi_gpio_eth/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_eth_0/system_axi_gpio_eth_0.xdc] for cell 'system_i/axi_gpio_eth/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_eth_0/system_axi_gpio_eth_0_board.xdc] for cell 'system_i/axi_gpio_eth/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_gpio_eth_0/system_axi_gpio_eth_0_board.xdc] for cell 'system_i/axi_gpio_eth/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/src/constraints/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/src/constraints/Zybo-Z7-Master.xdc]
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_clocks.xdc] for cell 'system_i/axi_mem_intercon_HP0/s00_couplers/s00_regslice/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_clocks.xdc] for cell 'system_i/axi_mem_intercon_HP0/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s01_regslice_0/system_s01_regslice_0_clocks.xdc] for cell 'system_i/axi_mem_intercon_HP0/s01_couplers/s01_regslice/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s01_regslice_0/system_s01_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_s01_regslice_0/system_s01_regslice_0_clocks.xdc] for cell 'system_i/axi_mem_intercon_HP0/s01_couplers/s01_regslice/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_clocks.xdc] for cell 'system_i/axi_mem_intercon_HP0/m00_couplers/m00_regslice/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_clocks.xdc] for cell 'system_i/axi_mem_intercon_HP0/m00_couplers/m00_regslice/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc] for cell 'system_i/axi_vdma_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc] for cell 'system_i/axi_vdma_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0_clocks.xdc] for cell 'system_i/axi_vdma_1/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0_clocks.xdc] for cell 'system_i/axi_vdma_1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/src/ila_timing_workaround.xdc] for cell 'system_i/dvi2rgb_1/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_dvi2rgb_1_0/src/ila_timing_workaround.xdc] for cell 'system_i/dvi2rgb_1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0_clocks.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst'
+WARNING: [Vivado 12-508] No pins matched '*en_hs_datapath_reg/C'. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0_clocks.xdc:74]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-11' -from list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0_clocks.xdc:74]
+WARNING: [Vivado 12-508] No pins matched '*init_done_reg/C'. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0_clocks.xdc:75]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-11' -from list should not be empty. [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0_clocks.xdc:75]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/bd_0/ip/ip_3/bd_ca02_phy_0_clocks.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/system_mipi_csi2_rx_subsystem_0_0_impl.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_mipi_csi2_rx_subsystem_0_0/system_mipi_csi2_rx_subsystem_0_0_impl.xdc] for cell 'system_i/mipi_csi2_rx_subsystem_0/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rgb2dvi_1_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/rgb2dvi_1/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_rgb2dvi_1_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/rgb2dvi_1/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'system_i/v_axi4s_vid_out_0/inst'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'system_i/v_axi4s_vid_out_0/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_frmbuf_wr_0_0/system_v_frmbuf_wr_0_0.xdc] for cell 'system_i/v_frmbuf_wr_0/inst'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_frmbuf_wr_0_0/system_v_frmbuf_wr_0_0.xdc] for cell 'system_i/v_frmbuf_wr_0/inst'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_in_0/system_v_tc_in_0_clocks.xdc] for cell 'system_i/v_tc_in/U0'
+INFO: [Timing 38-2] Deriving generated clocks [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_in_0/system_v_tc_in_0_clocks.xdc:2]
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_in_0/system_v_tc_in_0_clocks.xdc] for cell 'system_i/v_tc_in/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_out_0/system_v_tc_out_0_clocks.xdc] for cell 'system_i/v_tc_out/U0'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_tc_out_0/system_v_tc_out_0_clocks.xdc] for cell 'system_i/v_tc_out/U0'
+Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'system_i/v_vid_in_axi4s_0/inst'
+Finished Parsing XDC File [/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'system_i/v_vid_in_axi4s_0/inst'
+WARNING: [XPM_CDC_ARRAY_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/xpm_array_single_01 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl:5]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/gen_spkt_fifo/generic_pkt/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/gen_spkt_fifo/generic_pkt/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/gen_spkt_fifo/generic_pkt/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/gen_spkt_fifo/generic_pkt/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[44].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/ecc_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/img_info_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[0].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[9].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[10].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[11].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[12].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[13].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[14].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[15].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[16].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[17].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[18].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[1].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[19].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[20].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[21].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[22].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[23].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[24].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[25].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[26].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[27].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[28].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[2].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[29].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[30].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[31].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[32].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[33].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[34].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[35].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[36].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[37].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[38].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[3].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[39].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[40].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[41].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[42].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[43].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[4].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[5].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[6].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[7].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_HANDSHAKE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.isr_cdc/HSC2R_CDC[8].hsc2r_bus_cdc 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:19]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/xpm_single_05 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/xpm_single_02 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/xpm_single_vfb_01 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-1714] 241 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 18 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3021.156 ; gain = 0.000 ; free physical = 1997 ; free virtual = 5310
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 13 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 37 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+56 Infos, 123 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:52 . Memory (MB): peak = 3021.156 ; gain = 305.023 ; free physical = 1997 ; free virtual = 5310
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3037.129 ; gain = 15.973 ; free physical = 1987 ; free virtual = 5302
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 192109a13
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3037.129 ; gain = 0.000 ; free physical = 1958 ; free virtual = 5273
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst_i_2__0 into driver instance system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst_i_4__0, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/split_ongoing_i_1__0 into driver instance system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/S_AXI_AREADY_I_i_3__0, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/split_ongoing_i_1 into driver instance system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/S_AXI_AREADY_I_i_4, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst_i_1 into driver instance system_i/axi_mem_intercon_HP0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst_i_3__0, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/sig_realign_cmd_cmplt_reg_i_1 into driver instance system_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/sig_realigner_btt2[15]_i_2, which resulted in an inversion of 18 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/GEN_INPUT_REG[3].sig_input_data_reg[3][9]_i_3 into driver instance system_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/GEN_INPUT_REG[2].sig_input_data_reg[2][9]_i_7, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/axi_vdma_1/U0/GEN_SPRT_FOR_MM2S.ADDR32.I_MM2S_DMA_MNGR/I_SM/vert_count[0]_i_3 into driver instance system_i/axi_vdma_1/U0/GEN_SPRT_FOR_MM2S.ADDR32.I_MM2S_DMA_MNGR/I_SM/zero_vsize_err_i_4, which resulted in an inversion of 77 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/dvi2rgb_1/U0/DataDecoders[0].DecoderX/PhaseAlignX/pState[0]_i_1__1 into driver instance system_i/dvi2rgb_1/U0/DataDecoders[0].DecoderX/PhaseAlignX/pStateNxt_inferred__8/i___3, which resulted in an inversion of 11 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/dvi2rgb_1/U0/DataDecoders[1].DecoderX/PhaseAlignX/pState[0]_i_1__0 into driver instance system_i/dvi2rgb_1/U0/DataDecoders[1].DecoderX/PhaseAlignX/pStateNxt_inferred__8/i___3, which resulted in an inversion of 11 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/dvi2rgb_1/U0/DataDecoders[2].DecoderX/PhaseAlignX/pState[0]_i_1 into driver instance system_i/dvi2rgb_1/U0/DataDecoders[2].DecoderX/PhaseAlignX/pStateNxt_inferred__8/i___3, which resulted in an inversion of 11 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_csi_rx_clk_lane.dphy_rx_clk_lane/en_init_to_reg.init_to_r_3[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_csi_rx_clk_lane.dphy_rx_clk_lane/en_init_to_reg.init_to_r_3[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_csi_rx_clk_lane.dphy_rx_clk_lane/en_init_to_reg.init_to_r_3[5]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_csi_rx_clk_lane.dphy_rx_clk_lane/en_init_to_reg.init_to_r_3[5]_i_2, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln1_axi_r1[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln1_axi_r1[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln2_axi_r1[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln2_axi_r1[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln3_axi_r1[1]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln3_axi_r1[1]_i_2, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln4_axi_r1[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln4_axi_r1[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln5_axi_r1[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln5_axi_r1[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln6_axi_r1[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln6_axi_r1[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln7_axi_r1[2]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_regs.gen_regs_wo_debug_wo_timeout.rx_reg_inst/hs_settle_reg_ln7_axi_r1[2]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/two_lane_hs_rx_timeout.hs_wait_count[15]_i_2 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/phy/inst/inst/bd_ca02_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/two_lane_hs_rx_timeout.hs_wait_count[15]_i_4, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/isr_i[31]_i_1 into driver instance system_i/mipi_csi2_rx_subsystem_0/U0/rx/inst/AXI_LITE.reg_inf/isr_i[55]_i_4, which resulted in an inversion of 28 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/pDataOutRaw[9]_i_1 into driver instance system_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/pDataOutRaw[9]_i_2__0, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/pDataOutRaw[9]_i_1__0 into driver instance system_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/pDataOutRaw[9]_i_2__1, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/q_m_2[7]_i_1 into driver instance system_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/q_m_2[7]_i_2__1, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance system_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter system_i/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance system_i/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
+INFO: [Opt 31-138] Pushed 9 inverter(s) to 48 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 235844501
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1725 ; free virtual = 5039
+INFO: [Opt 31-389] Phase Retarget created 579 cells and removed 2020 cells
+INFO: [Opt 31-1021] In phase Retarget, 288 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Phase 2 Constant propagation | Checksum: 1a774aff9
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1724 ; free virtual = 5039
+INFO: [Opt 31-389] Phase Constant propagation created 125 cells and removed 1411 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 862 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1a6b6531f
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1739 ; free virtual = 5054
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 6358 cells
+INFO: [Opt 31-1021] In phase Sweep, 484 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG system_i/processing_system7_0/inst/FCLK_CLK2_BUFG_inst to drive 158 load(s) on clock net system_i/processing_system7_0/inst/FCLK_CLK2_BUFG
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 19bff948e
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1739 ; free virtual = 5054
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 19bff948e
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1739 ; free virtual = 5054
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1fd871f57
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1739 ; free virtual = 5054
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 184 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             579  |            2020  |                                            288  |
+|  Constant propagation         |             125  |            1411  |                                            862  |
+|  Sweep                        |               1  |            6358  |                                            484  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            184  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1739 ; free virtual = 5054
+Ending Logic Optimization Task | Checksum: 2511cb04f
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 3274.270 ; gain = 0.000 ; free physical = 1739 ; free virtual = 5054
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 29 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
+Number of BRAM Ports augmented: 10 newly gated: 2 Total Ports: 58
+Ending PowerOpt Patch Enables Task | Checksum: 1f83cc01b
+
+Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.4 . Memory (MB): peak = 3652.660 ; gain = 0.000 ; free physical = 1656 ; free virtual = 4977
+Ending Power Optimization Task | Checksum: 1f83cc01b
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 3652.660 ; gain = 378.391 ; free physical = 1686 ; free virtual = 5007
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1f83cc01b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3652.660 ; gain = 0.000 ; free physical = 1686 ; free virtual = 5007
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3652.660 ; gain = 0.000 ; free physical = 1686 ; free virtual = 5007
+Ending Netlist Obfuscation Task | Checksum: 1d59d0f27
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3652.660 ; gain = 0.000 ; free physical = 1686 ; free virtual = 5007
+INFO: [Common 17-83] Releasing license: Implementation
+110 Infos, 123 Warnings, 2 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 3652.660 ; gain = 631.504 ; free physical = 1686 ; free virtual = 5007
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3652.660 ; gain = 0.000 ; free physical = 1682 ; free virtual = 5007
+INFO: [Common 17-1381] The checkpoint '/home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3655.672 ; gain = 3.012 ; free physical = 1671 ; free virtual = 5004
+INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 3695.691 ; gain = 40.020 ; free physical = 1583 ; free virtual = 4917
+Command: place_design -directive ExtraTimingOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'ExtraTimingOpt' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3695.691 ; gain = 0.000 ; free physical = 1582 ; free virtual = 4917
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13ef2349b
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3695.691 ; gain = 0.000 ; free physical = 1582 ; free virtual = 4917
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3695.691 ; gain = 0.000 ; free physical = 1582 ; free virtual = 4917
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (8) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  In   RangeId: 1  has only 0 sites available on device, but needs 8 sites.
+	Term: btns_4bits_tri_i[0]
+	Term: btns_4bits_tri_i[1]
+	Term: btns_4bits_tri_i[2]
+	Term: btns_4bits_tri_i[3]
+	Term: sws_4bits_tri_i[0]
+	Term: sws_4bits_tri_i[1]
+	Term: sws_4bits_tri_i[2]
+	Term: sws_4bits_tri_i[3]
+
+
+Resolution: Consider using Xilinx part with greater number of IO pins
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (4) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  In   RangeId: 1  has only 0 sites available on device, but needs 8 sites.
+	Term: btns_4bits_tri_i[0]
+	Term: btns_4bits_tri_i[1]
+	Term: btns_4bits_tri_i[2]
+	Term: btns_4bits_tri_i[3]
+	Term: sws_4bits_tri_i[0]
+	Term: sws_4bits_tri_i[1]
+	Term: sws_4bits_tri_i[2]
+	Term: sws_4bits_tri_i[3]
+
+
+ IO Group: 1 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  BiDi RangeId: 1 Drv: 12  has only 0 sites available on device, but needs 4 sites.
+	Term: leds_4bits_tri_io[0]
+	Term: leds_4bits_tri_io[1]
+	Term: leds_4bits_tri_io[2]
+	Term: leds_4bits_tri_io[3]
+
+
+Resolution: Consider using Xilinx part with greater number of IO pins
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (12) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  In   RangeId: 1  has only 0 sites available on device, but needs 8 sites.
+	Term: btns_4bits_tri_i[0]
+	Term: btns_4bits_tri_i[1]
+	Term: btns_4bits_tri_i[2]
+	Term: btns_4bits_tri_i[3]
+	Term: sws_4bits_tri_i[0]
+	Term: sws_4bits_tri_i[1]
+	Term: sws_4bits_tri_i[2]
+	Term: sws_4bits_tri_i[3]
+
+
+ IO Group: 1 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  BiDi RangeId: 1 Drv: 12  has only 0 sites available on device, but needs 4 sites.
+	Term: leds_4bits_tri_io[0]
+	Term: leds_4bits_tri_io[1]
+	Term: leds_4bits_tri_io[2]
+	Term: leds_4bits_tri_io[3]
+
+
+Resolution: Consider using Xilinx part with greater number of IO pins
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 13 |    25 |     3 | LVCMOS33(3)                                                            |                                          |        |  +3.30 |    YES |     |
+| 34 |    50 |    21 | LVCMOS33(13)  TMDS_33(8)                                               |                                          |        |  +3.30 |    YES |     |
+| 35 |    50 |    36 | LVCMOS33(16)  HSUL_12(6)  LVDS_25(6)  TMDS_33(8)                       |                                          |  +0.60 |  +3.30 |    YES |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   125 |    60 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 13     | pwm_rgb[0]           | LVCMOS33        | IOB_X0Y10            | Y12                  |                      |
+|        | pwm_rgb[1]           | LVCMOS33        | IOB_X0Y12            | T5                   |                      |
+|        | pwm_rgb[2]           | LVCMOS33        | IOB_X0Y13            | Y11                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 34     | hdmi_in_clk_p        | TMDS_33         | IOB_X1Y76            | U18                  |                      |
+|        | hdmi_in_clk_n        | TMDS_33         | IOB_X1Y75            | U19                  |                      |
+|        | hdmi_in_data_p[0]    | TMDS_33         | IOB_X1Y68            | V20                  |                      |
+|        | hdmi_in_data_n[0]    | TMDS_33         | IOB_X1Y67            | W20                  |                      |
+|        | hdmi_in_data_p[1]    | TMDS_33         | IOB_X1Y70            | T20                  |                      |
+|        | hdmi_in_data_n[1]    | TMDS_33         | IOB_X1Y69            | U20                  |                      |
+|        | hdmi_in_data_p[2]    | TMDS_33         | IOB_X1Y72            | N20                  |                      |
+|        | hdmi_in_data_n[2]    | TMDS_33         | IOB_X1Y71            | P20                  |                      |
+|        | ac_bclk[0]           | LVCMOS33        | IOB_X1Y99            | R19                  |                      |
+|        | ac_iic_scl_io        | LVCMOS33        | IOB_X1Y74            | N18                  |                      |
+|        | ac_iic_sda_io        | LVCMOS33        | IOB_X1Y54            | N17                  |                      |
+|        | ac_mclk              | LVCMOS33        | IOB_X1Y61            | R17                  | *                    |
+|        | ac_muten[0]          | LVCMOS33        | IOB_X1Y53            | P18                  |                      |
+|        | ac_pbdat[0]          | LVCMOS33        | IOB_X1Y59            | R18                  |                      |
+|        | ac_pblrc[0]          | LVCMOS33        | IOB_X1Y50            | T19                  |                      |
+|        | ac_recdat[0]         | LVCMOS33        | IOB_X1Y62            | R16                  |                      |
+|        | ac_reclrc[0]         | LVCMOS33        | IOB_X1Y66            | Y18                  |                      |
+|        | hdmi_in_ddc_scl_io   | LVCMOS33        | IOB_X1Y56            | W18                  |                      |
+|        | hdmi_in_ddc_sda_io   | LVCMOS33        | IOB_X1Y65            | Y19                  |                      |
+|        | hdmi_in_hpd[0]       | LVCMOS33        | IOB_X1Y55            | W19                  |                      |
+|        | pwm_rgb[5]           | LVCMOS33        | IOB_X1Y64            | V16                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 35     | dphy_clk_hs_p        | LVDS_25         | IOB_X1Y122           | J18                  |                      |
+|        | dphy_clk_hs_n        | LVDS_25         | IOB_X1Y121           | H18                  |                      |
+|        | dphy_data_hs_p[0]    | LVDS_25         | IOB_X1Y136           | M19                  |                      |
+|        | dphy_data_hs_n[0]    | LVDS_25         | IOB_X1Y135           | M20                  |                      |
+|        | dphy_data_hs_p[1]    | LVDS_25         | IOB_X1Y128           | L16                  |                      |
+|        | dphy_data_hs_n[1]    | LVDS_25         | IOB_X1Y127           | L17                  |                      |
+|        | hdmi_out_clk_p       | TMDS_33         | IOB_X1Y124           | H16                  |                      |
+|        | hdmi_out_clk_n       | TMDS_33         | IOB_X1Y123           | H17                  |                      |
+|        | hdmi_out_data_p[0]   | TMDS_33         | IOB_X1Y142           | D19                  |                      |
+|        | hdmi_out_data_n[0]   | TMDS_33         | IOB_X1Y141           | D20                  |                      |
+|        | hdmi_out_data_p[1]   | TMDS_33         | IOB_X1Y148           | C20                  |                      |
+|        | hdmi_out_data_n[1]   | TMDS_33         | IOB_X1Y147           | B20                  |                      |
+|        | hdmi_out_data_p[2]   | TMDS_33         | IOB_X1Y146           | B19                  |                      |
+|        | hdmi_out_data_n[2]   | TMDS_33         | IOB_X1Y145           | A20                  |                      |
+|        | Vaux14_v_n           | LVCMOS33        | IOB_X1Y107           | N16                  |                      |
+|        | Vaux14_v_p           | LVCMOS33        | IOB_X1Y108           | N15                  |                      |
+|        | Vaux15_v_n           | LVCMOS33        | IOB_X1Y101           | J16                  |                      |
+|        | Vaux15_v_p           | LVCMOS33        | IOB_X1Y102           | K16                  |                      |
+|        | Vaux6_v_n            | LVCMOS33        | IOB_X1Y109           | J14                  |                      |
+|        | Vaux6_v_p            | LVCMOS33        | IOB_X1Y110           | K14                  |                      |
+|        | Vaux7_v_n            | LVCMOS33        | IOB_X1Y105           | L15                  |                      |
+|        | Vaux7_v_p            | LVCMOS33        | IOB_X1Y106           | L14                  |                      |
+|        | cam_gpio[0]          | LVCMOS33        | IOB_X1Y113           | G20                  |                      |
+|        | cam_iic_scl_io       | LVCMOS33        | IOB_X1Y119           | F20                  |                      |
+|        | cam_iic_sda_io       | LVCMOS33        | IOB_X1Y120           | F19                  |                      |
+|        | dphy_clk_lp_n        | HSUL_12         | IOB_X1Y129           | J19                  | VRef=+0.60           |
+|        | dphy_clk_lp_p        | HSUL_12         | IOB_X1Y115           | H20                  | VRef=+0.60           |
+|        | dphy_data_lp_n[0]    | HSUL_12         | IOB_X1Y133           | M18                  | VRef=+0.60           |
+|        | dphy_data_lp_n[1]    | HSUL_12         | IOB_X1Y131           | L20                  | VRef=+0.60           |
+|        | dphy_data_lp_p[0]    | HSUL_12         | IOB_X1Y132           | L19                  | VRef=+0.60           |
+|        | dphy_data_lp_p[1]    | HSUL_12         | IOB_X1Y116           | J20                  | VRef=+0.60           |
+|        | eth_rst_b_tri_io[0]  | LVCMOS33        | IOB_X1Y144           | E17                  |                      |
+|        | hdmi_out_ddc_scl_io  | LVCMOS33        | IOB_X1Y118           | G17                  |                      |
+|        | hdmi_out_ddc_sda_io  | LVCMOS33        | IOB_X1Y117           | G18                  |                      |
+|        | pwm_rgb[3]           | LVCMOS33        | IOB_X1Y134           | M17                  |                      |
+|        | pwm_rgb[4]           | LVCMOS33        | IOB_X1Y137           | F17                  | *                    |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e95314b3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3695.691 ; gain = 0.000 ; free physical = 1624 ; free virtual = 4961
+Phase 1 Placer Initialization | Checksum: e95314b3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3695.691 ; gain = 0.000 ; free physical = 1624 ; free virtual = 4962
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: e95314b3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3695.691 ; gain = 0.000 ; free physical = 1624 ; free virtual = 4962
+INFO: [Common 17-83] Releasing license: Implementation
+127 Infos, 123 Warnings, 2 Critical Warnings and 6 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 15 06:41:23 2024...
