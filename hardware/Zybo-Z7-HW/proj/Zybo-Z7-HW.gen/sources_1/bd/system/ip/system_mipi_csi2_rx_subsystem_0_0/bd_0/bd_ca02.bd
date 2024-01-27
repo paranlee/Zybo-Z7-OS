@@ -8,7 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.1.2",
+      "tool_version": "2022.1",
       "validated": "true"
     },
     "design_tree": {
@@ -401,7 +401,7 @@
       "xbar": {
         "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
         "xci_name": "bd_ca02_xbar_0",
-        "xci_path": "ip/ip_0/bd_ca02_xbar_0.xci",
+        "xci_path": "ip\\ip_0\\bd_ca02_xbar_0.xci",
         "inst_hier_path": "xbar",
         "parameters": {
           "ADDR_WIDTH": {
@@ -446,13 +446,13 @@
       "r_sync": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "bd_ca02_r_sync_0",
-        "xci_path": "ip/ip_1/bd_ca02_r_sync_0.xci",
+        "xci_path": "ip\\ip_1\\bd_ca02_r_sync_0.xci",
         "inst_hier_path": "r_sync"
       },
       "rx": {
         "vlnv": "xilinx.com:ip:mipi_csi2_rx_ctrl:1.0",
         "xci_name": "bd_ca02_rx_0",
-        "xci_path": "ip/ip_2/bd_ca02_rx_0.xci",
+        "xci_path": "ip\\ip_2\\bd_ca02_rx_0.xci",
         "inst_hier_path": "rx",
         "parameters": {
           "AXIS_FIFO_DEPTH": {
@@ -526,7 +526,7 @@
       "phy": {
         "vlnv": "xilinx.com:ip:mipi_dphy:4.3",
         "xci_name": "bd_ca02_phy_0",
-        "xci_path": "ip/ip_3/bd_ca02_phy_0.xci",
+        "xci_path": "ip\\ip_3\\bd_ca02_phy_0.xci",
         "inst_hier_path": "phy",
         "parameters": {
           "C_CAL_MODE": {
@@ -639,7 +639,7 @@
       "vfb_0": {
         "vlnv": "xilinx.com:ip:vfb:1.0",
         "xci_name": "bd_ca02_vfb_0_0",
-        "xci_path": "ip/ip_4/bd_ca02_vfb_0_0.xci",
+        "xci_path": "ip\\ip_4\\bd_ca02_vfb_0_0.xci",
         "inst_hier_path": "vfb_0",
         "parameters": {
           "AXIS_TDATA_WIDTH": {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 15 06:08:27 2024" VIVADOVERSION="2022.1.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 21 17:54:11 2024" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -107,31 +107,6 @@
     <PORT DIR="I" NAME="Vp_Vn_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vp_in">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xadc_wiz_0" PORT="vp_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="3" NAME="sws_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_sw_btn_gpio_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_sw_btn" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="3" NAME="leds_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_led" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_led" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_t" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_t">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_led" PORT="gpio_io_t"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="3" NAME="btns_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_sw_btn_gpio2_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_sw_btn" PORT="gpio2_io_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="0" NAME="eth_rst_b_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_eth_gpio_io_i">
@@ -454,6 +429,21 @@
         <CONNECTION INSTANCE="rgb2dvi_1" PORT="TMDS_Data_n"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_sw_btn" PORT="gpio_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_sw_btn" PORT="gpio2_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_led" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -541,11 +531,6 @@
         <PORTMAP LOGICAL="SCL_T" PHYSICAL="ac_iic_scl_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_gpio_sw_btn_GPIO2" NAME="btns_4bits" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="btns_4bits_tri_i"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="axi_iic_0_IIC" NAME="cam_iic" TYPE="INITIATOR">
       <PORTMAPS>
         <PORTMAP LOGICAL="SCL_I" PHYSICAL="cam_iic_scl_i"/>
@@ -609,18 +594,6 @@
         <PORTMAP LOGICAL="SCL_I" PHYSICAL="hdmi_out_ddc_scl_i"/>
         <PORTMAP LOGICAL="SCL_O" PHYSICAL="hdmi_out_ddc_scl_o"/>
         <PORTMAP LOGICAL="SCL_T" PHYSICAL="hdmi_out_ddc_scl_t"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_gpio_led_GPIO" NAME="leds_4bits" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="leds_4bits_tri_i"/>
-        <PORTMAP LOGICAL="TRI_O" PHYSICAL="leds_4bits_tri_o"/>
-        <PORTMAP LOGICAL="TRI_T" PHYSICAL="leds_4bits_tri_t"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="axi_gpio_sw_btn_GPIO" NAME="sws_4bits" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TRI_I" PHYSICAL="sws_4bits_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -1449,7 +1422,7 @@
         <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
         <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
-        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
         <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
         <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
         <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
@@ -1561,19 +1534,9 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M07_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_i">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="system_imp" PORT="leds_4bits_tri_i"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="3" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="system_imp" PORT="leds_4bits_tri_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="gpio_io_t" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_t">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="system_imp" PORT="leds_4bits_tri_t"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1630,11 +1593,9 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_led_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
-            <PORTMAP LOGICAL="TRI_T" PHYSICAL="gpio_io_t"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -1929,14 +1890,14 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M06_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_sw_btn_gpio_io_i">
+        <PORT DIR="I" LEFT="3" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="system_imp" PORT="sws_4bits_tri_i"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_sw_btn_gpio2_io_i">
+        <PORT DIR="I" LEFT="3" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="system_imp" PORT="btns_4bits_tri_i"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1993,12 +1954,12 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_sw_btn_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_sw_btn_GPIO2" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio2_io_i"/>
           </PORTMAPS>
@@ -10306,7 +10267,7 @@
     </MODULE>
     <MODULE COREREVISION="8" FULLNAME="/dvi2rgb_1" HWVERSION="2.0" INSTANCE="dvi2rgb_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:2.0">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="/home/sgdh/Zybo-Z7-HW/repo/vivado-library/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
+        <DOCUMENT SOURCE="c:/FPGA_prj/Zybo-Z7-HW/repo/vivado-library/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
@@ -15796,7 +15757,7 @@
     </MODULE>
     <MODULE COREREVISION="8" FULLNAME="/rgb2dvi_1" HWVERSION="1.4" INSTANCE="rgb2dvi_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="/home/sgdh/Zybo-Z7-HW/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="c:/FPGA_prj/Zybo-Z7-HW/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>

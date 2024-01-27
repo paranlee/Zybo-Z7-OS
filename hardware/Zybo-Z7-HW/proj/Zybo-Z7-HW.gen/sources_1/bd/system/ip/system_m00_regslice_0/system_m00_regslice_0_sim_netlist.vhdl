@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2022.1.2 (lin64) Build 3605665 Fri Aug  5 22:52:02 MDT 2022
--- Date        : Mon Jan 15 06:15:42 2024
--- Host        : ubuntu running 64-bit Ubuntu 20.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/sgdh/Zybo-Z7-HW/proj/Zybo-Z7-HW.gen/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+-- Date        : Sun Jan 21 17:46:46 2024
+-- Host        : Matbi-Laptop running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_m00_regslice_0 -prefix
+--               system_m00_regslice_0_ system_m00_regslice_0_sim_netlist.vhdl
 -- Design      : system_m00_regslice_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,8 +27,6 @@ entity system_m00_regslice_0_axi_register_slice_v2_1_26_axic_register_slice is
     s_ready_i_reg_0 : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 54 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_m00_regslice_0_axi_register_slice_v2_1_26_axic_register_slice : entity is "axi_register_slice_v2_1_26_axic_register_slice";
 end system_m00_regslice_0_axi_register_slice_v2_1_26_axic_register_slice;
 
 architecture STRUCTURE of system_m00_regslice_0_axi_register_slice_v2_1_26_axic_register_slice is
@@ -5790,8 +5788,6 @@ entity system_m00_regslice_0_axi_register_slice_v2_1_26_axi_register_slice is
   attribute G_AXI_WUSER_INDEX of system_m00_regslice_0_axi_register_slice_v2_1_26_axi_register_slice : entity is 74;
   attribute G_AXI_WUSER_WIDTH : integer;
   attribute G_AXI_WUSER_WIDTH of system_m00_regslice_0_axi_register_slice_v2_1_26_axi_register_slice : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_m00_regslice_0_axi_register_slice_v2_1_26_axi_register_slice : entity is "axi_register_slice_v2_1_26_axi_register_slice";
   attribute P_FORWARD : integer;
   attribute P_FORWARD of system_m00_regslice_0_axi_register_slice_v2_1_26_axi_register_slice : entity is 0;
   attribute P_RESPONSE : integer;
@@ -6028,7 +6024,7 @@ entity system_m00_regslice_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_m00_regslice_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of system_m00_regslice_0 : entity is "axi_register_slice_v2_1_26_axi_register_slice,Vivado 2022.1.2";
+  attribute X_CORE_INFO of system_m00_regslice_0 : entity is "axi_register_slice_v2_1_26_axi_register_slice,Vivado 2022.1";
 end system_m00_regslice_0;
 
 architecture STRUCTURE of system_m00_regslice_0 is

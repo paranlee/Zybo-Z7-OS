@@ -14,10 +14,12 @@
 !hw_handoff/
 
 # vivado workspace
-proj/cache
+proj/*
 
 # ip repository
+repo/**
 !repo/vivado-library
+repo/vivado-library/**
 !repo/local
 !repo/local/**
 !repo/cache

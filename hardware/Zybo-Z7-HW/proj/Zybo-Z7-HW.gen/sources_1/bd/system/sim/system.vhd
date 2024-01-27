@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2022.1.2 (lin64) Build 3605665 Fri Aug  5 22:52:02 MDT 2022
---Date        : Mon Jan 15 06:07:24 2024
---Host        : ubuntu running 64-bit Ubuntu 20.04.6 LTS
+--Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+--Date        : Sun Jan 21 17:54:08 2024
+--Host        : Matbi-Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
 --Purpose     : IP block netlist
@@ -6605,7 +6605,7 @@ entity system is
     ac_pblrc : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_recdat : in STD_LOGIC_VECTOR ( 0 to 0 );
     ac_reclrc : out STD_LOGIC_VECTOR ( 0 to 0 );
-    btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     cam_gpio : out STD_LOGIC_VECTOR ( 0 to 0 );
     cam_iic_scl_i : in STD_LOGIC;
     cam_iic_scl_o : out STD_LOGIC;
@@ -6645,11 +6645,9 @@ entity system is
     hdmi_out_ddc_sda_i : in STD_LOGIC;
     hdmi_out_ddc_sda_o : out STD_LOGIC;
     hdmi_out_ddc_sda_t : out STD_LOGIC;
-    leds_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    leds_4bits_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     pwm_rgb : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
@@ -6753,9 +6751,7 @@ architecture STRUCTURE of system is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio_io_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio_io_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    gpio_io_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component system_axi_gpio_led_0;
   component system_axi_gpio_sw_btn_0 is
@@ -7684,16 +7680,12 @@ architecture STRUCTURE of system is
   signal axi_dynclk_0_LOCKED_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_5X_O : STD_LOGIC;
   signal axi_dynclk_0_PXL_CLK_O : STD_LOGIC;
-  signal axi_gpio_0_GPIO1_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_gpio_0_GPIO1_TRI_O : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_gpio_0_GPIO1_TRI_T : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_gpio_0_GPIO2_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_gpio_0_GPIO_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_0_ip2intc_irpt : STD_LOGIC;
   signal axi_gpio_eth_GPIO_TRI_I : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_eth_GPIO_TRI_O : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_eth_GPIO_TRI_T : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axi_gpio_led_gpio_io_o : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_i2s_adi_1_BCLK_O : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_i2s_adi_1_DMA_RX_REQ_TLAST : STD_LOGIC;
   signal axi_i2s_adi_1_DMA_RX_REQ_TREADY : STD_LOGIC;
@@ -7836,6 +7828,7 @@ architecture STRUCTURE of system is
   signal axis_subset_converter_out_M_AXIS_TREADY : STD_LOGIC;
   signal axis_subset_converter_out_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_subset_converter_out_M_AXIS_TVALID : STD_LOGIC;
+  signal btn_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_clk_out2 : STD_LOGIC;
   signal csi2_rst_gpio : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8225,6 +8218,7 @@ architecture STRUCTURE of system is
   signal rst_ps7_0_133M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_133M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sensor_rst_gpio : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal sw_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal sys_clock_1 : STD_LOGIC;
   signal v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_axi4s_vid_out_0_vid_io_out_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -8413,7 +8407,6 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute X_INTERFACE_INFO of btns_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 btns_4bits TRI_I";
   attribute X_INTERFACE_INFO of dphy_data_hs_n : signal is "xilinx.com:interface:mipi_phy:1.0 dphy DATA_HS_N";
   attribute X_INTERFACE_INFO of dphy_data_hs_p : signal is "xilinx.com:interface:mipi_phy:1.0 dphy DATA_HS_P";
   attribute X_INTERFACE_INFO of dphy_data_lp_n : signal is "xilinx.com:interface:mipi_phy:1.0 dphy DATA_LP_N";
@@ -8425,10 +8418,6 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of hdmi_in_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_in DATA_P";
   attribute X_INTERFACE_INFO of hdmi_out_data_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_out DATA_N";
   attribute X_INTERFACE_INFO of hdmi_out_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_out DATA_P";
-  attribute X_INTERFACE_INFO of leds_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_I";
-  attribute X_INTERFACE_INFO of leds_4bits_tri_o : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O";
-  attribute X_INTERFACE_INFO of leds_4bits_tri_t : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_T";
-  attribute X_INTERFACE_INFO of sws_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 sws_4bits TRI_I";
 begin
   SDATA_I_1(0) <= ac_recdat(0);
   Vaux14_1_V_N <= Vaux14_v_n;
@@ -8451,12 +8440,10 @@ begin
   ac_pbdat(0) <= axi_i2s_adi_1_SDATA_O(0);
   ac_pblrc(0) <= axi_i2s_adi_1_LRCLK_O(0);
   ac_reclrc(0) <= axi_i2s_adi_1_LRCLK_O(0);
-  axi_gpio_0_GPIO1_TRI_I(3 downto 0) <= leds_4bits_tri_i(3 downto 0);
-  axi_gpio_0_GPIO2_TRI_I(3 downto 0) <= btns_4bits_tri_i(3 downto 0);
-  axi_gpio_0_GPIO_TRI_I(3 downto 0) <= sws_4bits_tri_i(3 downto 0);
   axi_gpio_eth_GPIO_TRI_I(0) <= eth_rst_b_tri_i(0);
   axi_iic_0_IIC_SCL_I <= cam_iic_scl_i;
   axi_iic_0_IIC_SDA_I <= cam_iic_sda_i;
+  btn_1(3 downto 0) <= btn(3 downto 0);
   cam_gpio(0) <= sensor_rst_gpio(0);
   cam_iic_scl_o <= axi_iic_0_IIC_SCL_O;
   cam_iic_scl_t <= axi_iic_0_IIC_SCL_T;
@@ -8491,13 +8478,13 @@ begin
   hdmi_out_ddc_scl_t <= processing_system7_0_IIC_0_SCL_T;
   hdmi_out_ddc_sda_o <= processing_system7_0_IIC_0_SDA_O;
   hdmi_out_ddc_sda_t <= processing_system7_0_IIC_0_SDA_T;
-  leds_4bits_tri_o(3 downto 0) <= axi_gpio_0_GPIO1_TRI_O(3 downto 0);
-  leds_4bits_tri_t(3 downto 0) <= axi_gpio_0_GPIO1_TRI_T(3 downto 0);
+  led(3 downto 0) <= axi_gpio_led_gpio_io_o(3 downto 0);
   processing_system7_0_IIC_0_SCL_I <= hdmi_out_ddc_scl_i;
   processing_system7_0_IIC_0_SDA_I <= hdmi_out_ddc_sda_i;
   processing_system7_0_IIC_1_SCL_I <= ac_iic_scl_i;
   processing_system7_0_IIC_1_SDA_I <= ac_iic_sda_i;
   pwm_rgb(5 downto 0) <= PWM_0_pwm(5 downto 0);
+  sw_1(3 downto 0) <= sw(3 downto 0);
   sys_clock_1 <= sys_clock;
 PS_GPIO_0: component system_PS_GPIO_0_0
      port map (
@@ -8569,9 +8556,7 @@ axi_gpio_eth: component system_axi_gpio_eth_0
     );
 axi_gpio_led: component system_axi_gpio_led_0
      port map (
-      gpio_io_i(3 downto 0) => axi_gpio_0_GPIO1_TRI_I(3 downto 0),
-      gpio_io_o(3 downto 0) => axi_gpio_0_GPIO1_TRI_O(3 downto 0),
-      gpio_io_t(3 downto 0) => axi_gpio_0_GPIO1_TRI_T(3 downto 0),
+      gpio_io_o(3 downto 0) => axi_gpio_led_gpio_io_o(3 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_GP0_M07_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -8594,8 +8579,8 @@ axi_gpio_led: component system_axi_gpio_led_0
     );
 axi_gpio_sw_btn: component system_axi_gpio_sw_btn_0
      port map (
-      gpio2_io_i(3 downto 0) => axi_gpio_0_GPIO2_TRI_I(3 downto 0),
-      gpio_io_i(3 downto 0) => axi_gpio_0_GPIO_TRI_I(3 downto 0),
+      gpio2_io_i(3 downto 0) => btn_1(3 downto 0),
+      gpio_io_i(3 downto 0) => sw_1(3 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_GP0_M06_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),

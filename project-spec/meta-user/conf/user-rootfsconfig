@@ -3,3 +3,6 @@
 
 CONFIG_gpio-demo
 CONFIG_peekpoke
+CONFIG_uio-led
+CONFIG_mem-led
+CONFIG_uftrace

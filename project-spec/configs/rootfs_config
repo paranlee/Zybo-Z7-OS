@@ -3885,11 +3885,14 @@ CONFIG_Init-manager-sysvinit=y
 # apps 
 #
 CONFIG_gpio-demo=y
+CONFIG_mem-led=y
 CONFIG_peekpoke=y
+CONFIG_uio-led=y
 
 #
 # user packages 
 #
+CONFIG_uftrace=y
 
 #
 # PetaLinux RootFS Settings

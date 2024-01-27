@@ -199,7 +199,7 @@ if __name__ == "__main__":
     
     if hasattr(args, 'version'):
         funcargs['vivado_cmd'] = os.path.join(os.path.abspath(config_settings['VivadoInstallPath']), args.version, 'bin', 'vivado')
-        funcargs['vivado_cmd'] = "/tools/Xilinx/Vivado/2022.1/bin/vivado" # `which vivado`
+        funcargs['vivado_cmd'] = "/tools/Xilinx/Vivado/2022.1/bin/vivado"
         funcargs['version'] = args.version
         if not os.path.isfile(funcargs['vivado_cmd']):
             print('Error: Vivado not installed at %s' % funcargs['vivado_cmd'])
