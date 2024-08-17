@@ -14,7 +14,7 @@
 !hw_handoff/
 
 # vivado workspace
-proj/*
+
 
 # ip repository
 repo/**

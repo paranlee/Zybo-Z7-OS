@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/FPGA_prj/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1/system_wrapper.tcl"
+  variable script "C:/Users/kim/Documents/github/vivado/Zybo-Z7-HW/proj/Zybo-Z7-HW.runs/impl_1/system_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -125,7 +125,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 4
   open_checkpoint system_wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/FPGA_prj/Zybo-Z7-HW/proj/Zybo-Z7-HW.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/kim/Documents/github/vivado/Zybo-Z7-HW/proj/Zybo-Z7-HW.cache/wt [current_project]
 set_property TOP system_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
